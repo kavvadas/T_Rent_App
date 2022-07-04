@@ -1,0 +1,60 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>260</x><y>726</y><w>250</w><h>200</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+--
+RenterInfoView
+--
+~setUsername(String username):void
+~setPassword(String password):void
+~setName(String name):void
+~setLastname(String lastname):void
+~setPhone(String phone):void
+~setEmail(String email):void
+~setBirthdate(LocalDate date):void
+~setNickname(String nickname):void
+~startEditRenter(String username):void
+~startDeleteRenter():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>590</y><w>30</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>716</y><w>210</w><h>60</h></coordinates><panel_attributes>&lt;&lt;layout&gt;&gt;
+--
+activity_renter_info.xml</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>590</y><w>110</w><h>150</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;130;90;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>140</x><y>476</y><w>250</w><h>130</h></coordinates><panel_attributes>RenterInfoActivity
+--
+-viewModel:RenterInfoViewModel
++RENTER_NICKNAME:String
+~buttonEdit:Button
+~buttonDelete:Button
+--
+#onCreate(Bundle savedInstanceState):void
+ 
+
+ 
+ 
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>260</x><y>330</y><w>30</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>160</x><y>306</y><w>210</w><h>30</h></coordinates><panel_attributes>AppCompatActivity
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>540</y><w>160</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>406</y><w>340</w><h>290</h></coordinates><panel_attributes>RenterInfoPresenter
+--
+-view:RenterInfoView
+-renter:RentAccount
+-renterDao:RenterDao
+--
++findRenterInfo():void
++onEditRenter():void
++onDeleteRenter():void
++setRenter(User user):void
++setRenterDao(RenterDao renterDao):void
++setView(RenterInfoView view):void
++clearView():void
+
+
+
+ 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1012</x><y>566</y><w>210</w><h>30</h></coordinates><panel_attributes>RenterDao
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>852</x><y>570</y><w>180</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+περιέχει</panel_attributes><additional_attributes>160;20;10;16</additional_attributes></element><element><id>Relation</id><coordinates><x>680</x><y>290</y><w>80</w><h>140</h></coordinates><panel_attributes>lt=&lt;-
+presenter
+
+1</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>196</y><w>270</w><h>100</h></coordinates><panel_attributes>RenterInfoViewModel
+--
+~presenter:RenterInfoPresenter
+--
++RenterInfoViewModel()
++getPresenter():RenterInfoPresenter
+#onCleared():void
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>100</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>80</y><w>280</w><h>30</h></coordinates><panel_attributes>androidx.lifecycle.RenterInfoViewModel
+ </panel_attributes><additional_attributes></additional_attributes></element></diagram>

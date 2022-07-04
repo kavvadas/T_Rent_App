@@ -1,0 +1,66 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>1112</x><y>470</y><w>210</w><h>30</h></coordinates><panel_attributes>OwnerDao
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>952</x><y>474</y><w>180</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+περιέχει</panel_attributes><additional_attributes>160;20;10;16</additional_attributes></element><element><id>UMLClass</id><coordinates><x>620</x><y>390</y><w>340</w><h>240</h></coordinates><panel_attributes>LoginPresenter
+--
+-view:LoginView
+-ownerDao:OwnerDao
+-renterDao:RenterDao
+-loginDao:LoginDao
+--
++loginPresenter()
++checkInDao(String username, String password):void
++setView(LoginView view):void
++clearView():void
++setOwnerDao(OwnerDao ownerDao):void
++setRenterDao(RenterDao renterDao):void
++setLoginDao(LoginDao loginDao):void
++getLoginDao():LoginDao
++validateCredentials():void
+
+
+ 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>284</y><w>80</w><h>130</h></coordinates><panel_attributes>lt=&lt;-
+presenter
+
+1</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>180</y><w>250</w><h>110</h></coordinates><panel_attributes>LoginViewModel
+--
+~presenter:LoginPresenter
+--
++LoginViewModel()
++getPresenter():LoginPresenter
+#onCleared():void
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>760</x><y>84</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>64</y><w>280</w><h>30</h></coordinates><panel_attributes>androidx.lifecycle.LoginViewModel
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>524</y><w>160</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>240</x><y>460</y><w>250</w><h>190</h></coordinates><panel_attributes>LoginActivity
+--
+~viewModel:LoginViewModel
+~button_for_login:Button
+-OWNER_TITLE_EXTRA:String
+-RENTER_NICKNAME_EXTRA:String
+-MEMORY:boolean
+-checkBox:Checkbox
+--
+#onCreate(Bundle savedInstanceState):void
++onClick(View view):void
++onBackPressed():void
+
+
+ 
+ 
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>314</y><w>30</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>290</y><w>210</w><h>30</h></coordinates><panel_attributes>AppCompatActivity
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>634</y><w>120</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>100;70;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>700</y><w>250</w><h>150</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+--
+LoginView
+--
+~getUsername():String
+~getPassword():String
+~showPop(LoginView view, String mess):void
+~startOwnerPage(String title):void
+~startRenterPage(String nickname):void
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>720</y><w>210</w><h>60</h></coordinates><panel_attributes>&lt;&lt;layout&gt;&gt;
+--
+activity_login.xml</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>634</y><w>90</w><h>110</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;90;70;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1112</x><y>530</y><w>210</w><h>30</h></coordinates><panel_attributes>RenterDao
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1112</x><y>590</y><w>210</w><h>30</h></coordinates><panel_attributes>LoginDao
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>942</x><y>524</y><w>190</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+περιέχει</panel_attributes><additional_attributes>170;20;10;16</additional_attributes></element><element><id>Relation</id><coordinates><x>952</x><y>574</y><w>180</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+περιέχει</panel_attributes><additional_attributes>160;20;10;16</additional_attributes></element></diagram>

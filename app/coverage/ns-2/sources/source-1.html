@@ -1,0 +1,232 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > Ad</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+    @import "../../.css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../.js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">gr.aueb.sweng22.team11.domain</a>
+</div>
+
+<h1>Coverage Summary for Class: Ad (gr.aueb.sweng22.team11.domain)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Ad</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    95%
+  </span>
+  <span class="absValue">
+    (19/20)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    77.8%
+  </span>
+  <span class="absValue">
+    (42/54)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package gr.aueb.sweng22.team11.domain;
+<i class="no-highlight">2</i>&nbsp;import java.time.LocalDate;
+<i class="no-highlight">3</i>&nbsp;import java.util.ArrayList;
+<i class="no-highlight">4</i>&nbsp;import static java.time.temporal.ChronoUnit.DAYS;
+<i class="no-highlight">5</i>&nbsp;
+<i class="no-highlight">6</i>&nbsp;import android.os.Build;
+<i class="no-highlight">7</i>&nbsp;
+<i class="no-highlight">8</i>&nbsp;import androidx.annotation.RequiresApi;
+<i class="no-highlight">9</i>&nbsp;
+<i class="no-highlight">10</i>&nbsp;public class Ad { //αγγελία που κατασκευάζει ο ιδιοκτήτης
+<i class="no-highlight">11</i>&nbsp;
+<i class="no-highlight">12</i>&nbsp;    private OwnerAccount owner; //ο ιδιοκτήτης που φτιάχνει την αγγελία
+<i class="no-highlight">13</i>&nbsp;    private House house; //το σπίτι το οποίο περιέχεται στην αγγελία
+<b class="fc"><i class="no-highlight">14</i>&nbsp;    private ArrayList&lt;Request&gt; requests = new ArrayList&lt;&gt;(); //λίστα αιτημάτων που στέλνουν ενοικιαστές που ενδιαφέρονται για τη συγκεκριμένη αγγελία</b>
+<i class="no-highlight">15</i>&nbsp;    private LocalDate dateCreated; //ημερομηνία που αναφέρει πότε δημιούργησε ο ιδιοκτήτης την αγγελία
+<i class="no-highlight">16</i>&nbsp;    private String comment; //πρόσθετα σχόλια που μπορεί να θέλει να γράψει ο ιδιοκτήτης
+<b class="fc"><i class="no-highlight">17</i>&nbsp;    private ArrayList&lt;Appointment&gt; appointments = new ArrayList&lt;&gt;(); //λίστα με όλες τις ημερομηνίες που οι ενοικιαστές μπορούν να κλείσουν ραντεβού με τον ιδιοκτήτη</b>
+<i class="no-highlight">18</i>&nbsp;    private Pricing price; //τίμημα που πρέπει να πληρωθεί από τον ιδιοκτήτη εάν ενδιαφερόμενοι &gt; 50 ή η αγγελία είναι διαθέσιμη για πάνω από έναν μήνα
+<b class="fc"><i class="no-highlight">19</i>&nbsp;    private ArrayList&lt;RentAccount&gt; interestedRenters = new ArrayList&lt;&gt;(); //πλήθος ενδιαφερόμενων ενοικιαστών</b>
+<i class="no-highlight">20</i>&nbsp;
+<i class="no-highlight">21</i>&nbsp;
+<b class="fc"><i class="no-highlight">22</i>&nbsp;    public Ad(){} //default κατασκευαστής. Όταν καλείται δημιουργείται μία νέα αγγελία στην οποία μέσω των setters πρέπει να ορίσουμε τις τιμές που θα έχει</b>
+<i class="no-highlight">23</i>&nbsp;
+<i class="no-highlight">24</i>&nbsp;    @RequiresApi(api = Build.VERSION_CODES.O)
+<b class="nc"><i class="no-highlight">25</i>&nbsp;    public Ad(House house, ArrayList&lt;Appointment&gt; appointments, String comment) {</b>
+<b class="nc"><i class="no-highlight">26</i>&nbsp;        this.house = house; //πρέπει να έχουμε ήδη φτιάξει κατοικία</b>
+<b class="nc"><i class="no-highlight">27</i>&nbsp;        this.dateCreated = LocalDate.now(); //η ημερομηνία θα είναι η μέρα που το κατασκευάζουμε</b>
+<b class="nc"><i class="no-highlight">28</i>&nbsp;        this.comment = comment; //έχουμε ήδη γράψει το σχόλιο</b>
+<b class="nc"><i class="no-highlight">29</i>&nbsp;        this.appointments = appointments; //τα ραντεβού που θα έχει επιλέξει ο ιδιοκτήτης</b>
+<b class="nc"><i class="no-highlight">30</i>&nbsp;        this.requests = new ArrayList&lt;&gt;(); //όταν φτιάχνεται μία αγγελία η λίστα αιτημάτων πρέπει να είναι κενή</b>
+<b class="nc"><i class="no-highlight">31</i>&nbsp;        this.interestedRenters = new ArrayList&lt;&gt;(); //αρχικά κενή λίστα ενδιαφερόμενων ενοικιαστών</b>
+<i class="no-highlight">32</i>&nbsp;
+<b class="nc"><i class="no-highlight">33</i>&nbsp;    }</b>
+<i class="no-highlight">34</i>&nbsp;    //κατασκευαστής με τη χρήση ήδη έτοιμων τιμών
+<i class="no-highlight">35</i>&nbsp;
+<i class="no-highlight">36</i>&nbsp;    @RequiresApi(api = Build.VERSION_CODES.O)
+<i class="no-highlight">37</i>&nbsp;    public void checkForPricing() //έλεγχος για την δημιουργία τιμήματος για την αγγελία
+<i class="no-highlight">38</i>&nbsp;    {
+<b class="fc"><i class="no-highlight">39</i>&nbsp;        long noOfDaysBetween = DAYS.between(LocalDate.now(), this.dateCreated); //πλήθος ημερών μεταξύ της στιγμής δημιουργίας και της σημερινής ημερομηνίας</b>
+<i class="no-highlight">40</i>&nbsp;
+<b class="fc"><i class="no-highlight">41</i>&nbsp;        if((this.getInterestedRenters().size() &gt; 50) || noOfDaysBetween &gt; 30) //αν μία από τις δύο συνθήκες ισχύουν το τίμημα πρέπει να πληρωθεί</b>
+<i class="no-highlight">42</i>&nbsp;        {
+<b class="fc"><i class="no-highlight">43</i>&nbsp;            this.getPrice().setHasToBePaid(); //ορισμός boolean για το αν πρέπει να πληρωθεί σε true</b>
+<i class="no-highlight">44</i>&nbsp;        }
+<b class="fc"><i class="no-highlight">45</i>&nbsp;    }</b>
+<i class="no-highlight">46</i>&nbsp;
+<b class="fc"><i class="no-highlight">47</i>&nbsp;    public ArrayList&lt;RentAccount&gt; getInterestedRenters(){return this.interestedRenters;}</b>
+<i class="no-highlight">48</i>&nbsp;
+<i class="no-highlight">49</i>&nbsp;    public void acceptRequest(Request request){ //όταν ο ενοικιαστής στέλνει αίτημα για μία αγγελία και το αποδέχεται ο ενοικιαστής
+<b class="fc"><i class="no-highlight">50</i>&nbsp;        if(!this.getRequests().contains(request)||request==null){</b>
+<b class="nc"><i class="no-highlight">51</i>&nbsp;            return;</b>
+<i class="no-highlight">52</i>&nbsp;            //αρχικά ελέγχουμε εάν το αίτημα βρίσκεται ήδη στη λίστα ή δεν έχει τιμή
+<i class="no-highlight">53</i>&nbsp;        }
+<b class="fc"><i class="no-highlight">54</i>&nbsp;        request.setAccepted(true);</b>
+<b class="fc"><i class="no-highlight">55</i>&nbsp;        request.getRenter().addAppointment(request.getAppointment()); //στα ραντεβού που ενδιαφέρεται ο ενοικιαστής αποθηκεύουμε την ημερομηνία που επέλεξε για τη συγκεκριμένη αγγελία</b>
+<b class="fc"><i class="no-highlight">56</i>&nbsp;        this.getRequests().remove(request); //αφαιρούμε το αίτημα που έστειλε ο ενοικιαστής από τη λίστα αιτημάτων της συγκεκριμένης αγγελίας καθώς δεν έχει λόγο ύπαρξης για τον ιδιοκτήτη</b>
+<b class="fc"><i class="no-highlight">57</i>&nbsp;        this.getInterestedRenters().remove(request.getRenter());</b>
+<b class="fc"><i class="no-highlight">58</i>&nbsp;    }</b>
+<i class="no-highlight">59</i>&nbsp;    public void rejectRequest(Request request){
+<b class="fc"><i class="no-highlight">60</i>&nbsp;        if(!this.getRequests().contains(request)||request==null){</b>
+<b class="nc"><i class="no-highlight">61</i>&nbsp;            return;</b>
+<i class="no-highlight">62</i>&nbsp;        }
+<b class="fc"><i class="no-highlight">63</i>&nbsp;        request.setAccepted(false);</b>
+<b class="fc"><i class="no-highlight">64</i>&nbsp;        this.getRequests().remove(request); //αντίστοιχα, εάν ο ιδιοκτήτης απορρίψει το αίτημα ενός ενοικιαστή, το αφαιρούμε από τη λίστα αιτημάτων</b>
+<b class="fc"><i class="no-highlight">65</i>&nbsp;        this.getInterestedRenters().remove(request.getRenter());</b>
+<b class="fc"><i class="no-highlight">66</i>&nbsp;    }</b>
+<i class="no-highlight">67</i>&nbsp;    @RequiresApi(api = Build.VERSION_CODES.O)
+<i class="no-highlight">68</i>&nbsp;    public void addRenterRequest(RentAccount renter, Appointment appointment){ //προσθήκη στη λίστα αιτημάτων αγγελίας
+<b class="fc"><i class="no-highlight">69</i>&nbsp;        if(renter == null || appointment == null){</b>
+<b class="nc"><i class="no-highlight">70</i>&nbsp;            return;</b>
+<i class="no-highlight">71</i>&nbsp;        }
+<b class="fc"><i class="no-highlight">72</i>&nbsp;        requests.add(new Request(renter,appointment));</b>
+<b class="fc"><i class="no-highlight">73</i>&nbsp;        interestedRenters.add(renter); //προσθήκη του ενοικιαστή που έστειλε το αίτημα</b>
+<b class="fc"><i class="no-highlight">74</i>&nbsp;    }</b>
+<i class="no-highlight">75</i>&nbsp;
+<i class="no-highlight">76</i>&nbsp;    public House getHouse() {
+<b class="fc"><i class="no-highlight">77</i>&nbsp;        return house;</b>
+<i class="no-highlight">78</i>&nbsp;    }
+<i class="no-highlight">79</i>&nbsp;
+<i class="no-highlight">80</i>&nbsp;    public void setHouse(House house) {
+<b class="fc"><i class="no-highlight">81</i>&nbsp;        this.house = house;</b>
+<b class="fc"><i class="no-highlight">82</i>&nbsp;    }</b>
+<i class="no-highlight">83</i>&nbsp;
+<i class="no-highlight">84</i>&nbsp;    public ArrayList&lt;Request&gt; getRequests() {
+<b class="fc"><i class="no-highlight">85</i>&nbsp;        return requests;</b>
+<i class="no-highlight">86</i>&nbsp;    }
+<i class="no-highlight">87</i>&nbsp;
+<b class="fc"><i class="no-highlight">88</i>&nbsp;    public void setDateCreated(LocalDate d){this.dateCreated = d;}</b>
+<i class="no-highlight">89</i>&nbsp;
+<i class="no-highlight">90</i>&nbsp;    public LocalDate getDateCreated() {
+<b class="fc"><i class="no-highlight">91</i>&nbsp;        return dateCreated;</b>
+<i class="no-highlight">92</i>&nbsp;    }
+<i class="no-highlight">93</i>&nbsp;
+<i class="no-highlight">94</i>&nbsp;    public ArrayList&lt;Appointment&gt; getAppointments() {
+<b class="fc"><i class="no-highlight">95</i>&nbsp;        return appointments;</b>
+<i class="no-highlight">96</i>&nbsp;    }
+<i class="no-highlight">97</i>&nbsp;
+<i class="no-highlight">98</i>&nbsp;    public void addAppointment(Appointment appointment) {
+<b class="fc"><i class="no-highlight">99</i>&nbsp;        if(appointments.contains(appointment)||appointment == null){</b>
+<b class="nc"><i class="no-highlight">100</i>&nbsp;            return;</b>
+<i class="no-highlight">101</i>&nbsp;        }
+<b class="fc"><i class="no-highlight">102</i>&nbsp;        appointments.add(appointment);</b>
+<b class="fc"><i class="no-highlight">103</i>&nbsp;    }</b>
+<i class="no-highlight">104</i>&nbsp;
+<i class="no-highlight">105</i>&nbsp;    public String getComment() {
+<b class="fc"><i class="no-highlight">106</i>&nbsp;        return comment;</b>
+<i class="no-highlight">107</i>&nbsp;    }
+<i class="no-highlight">108</i>&nbsp;
+<i class="no-highlight">109</i>&nbsp;    public void setComment(String comment) {
+<b class="fc"><i class="no-highlight">110</i>&nbsp;        this.comment = comment;</b>
+<b class="fc"><i class="no-highlight">111</i>&nbsp;    }</b>
+<i class="no-highlight">112</i>&nbsp;
+<i class="no-highlight">113</i>&nbsp;    public void setPrice(Pricing p)
+<i class="no-highlight">114</i>&nbsp;    {
+<b class="fc"><i class="no-highlight">115</i>&nbsp;        this.price = p;</b>
+<b class="fc"><i class="no-highlight">116</i>&nbsp;    }</b>
+<i class="no-highlight">117</i>&nbsp;
+<i class="no-highlight">118</i>&nbsp;    public Pricing getPrice()
+<i class="no-highlight">119</i>&nbsp;    {
+<b class="fc"><i class="no-highlight">120</i>&nbsp;        return this.price;</b>
+<i class="no-highlight">121</i>&nbsp;    }
+<i class="no-highlight">122</i>&nbsp;
+<b class="fc"><i class="no-highlight">123</i>&nbsp;    public void setOwner(OwnerAccount owner){this.owner = owner;}</b>
+<i class="no-highlight">124</i>&nbsp;
+<b class="fc"><i class="no-highlight">125</i>&nbsp;    public OwnerAccount getOwner(){return owner;}</b>
+<i class="no-highlight">126</i>&nbsp;
+<i class="no-highlight">127</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-05-16 20:35</div>
+</div>
+</body>
+</html>

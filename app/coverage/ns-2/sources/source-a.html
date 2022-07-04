@@ -1,0 +1,223 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > User</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+    @import "../../.css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../.js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">gr.aueb.sweng22.team11.domain</a>
+</div>
+
+<h1>Coverage Summary for Class: User (gr.aueb.sweng22.team11.domain)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">User</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (19/19)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    98.2%
+  </span>
+  <span class="absValue">
+    (54/55)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package gr.aueb.sweng22.team11.domain;
+<i class="no-highlight">2</i>&nbsp;import java.time.LocalDate;
+<i class="no-highlight">3</i>&nbsp;import java.util.ArrayList;
+<i class="no-highlight">4</i>&nbsp;
+<i class="no-highlight">5</i>&nbsp;public class User {
+<i class="no-highlight">6</i>&nbsp;
+<i class="no-highlight">7</i>&nbsp;    private String FirstName, LastName,phoneNumber,email;
+<i class="no-highlight">8</i>&nbsp;    private LocalDate DateOfBirth;
+<i class="no-highlight">9</i>&nbsp;    private Credentials credentials;
+<i class="no-highlight">10</i>&nbsp;    private ArrayList&lt;Notification&gt; Notification;
+<i class="no-highlight">11</i>&nbsp;
+<b class="fc"><i class="no-highlight">12</i>&nbsp;    public User(){</b>
+<b class="fc"><i class="no-highlight">13</i>&nbsp;        this.FirstName = &quot;&quot;;</b>
+<b class="fc"><i class="no-highlight">14</i>&nbsp;        this.LastName = &quot;&quot;;</b>
+<b class="fc"><i class="no-highlight">15</i>&nbsp;        this.phoneNumber = &quot;&quot;;</b>
+<b class="fc"><i class="no-highlight">16</i>&nbsp;        this.email = &quot;&quot;;</b>
+<b class="fc"><i class="no-highlight">17</i>&nbsp;        this.DateOfBirth = null;</b>
+<b class="fc"><i class="no-highlight">18</i>&nbsp;        this.credentials = null;</b>
+<b class="fc"><i class="no-highlight">19</i>&nbsp;    }</b>
+<i class="no-highlight">20</i>&nbsp;
+<b class="fc"><i class="no-highlight">21</i>&nbsp;    public User(String first, String last, String phone, String email, LocalDate date, Credentials credentials){</b>
+<b class="fc"><i class="no-highlight">22</i>&nbsp;        this.FirstName = first;</b>
+<b class="fc"><i class="no-highlight">23</i>&nbsp;        this.LastName = last;</b>
+<b class="fc"><i class="no-highlight">24</i>&nbsp;        this.phoneNumber = phone;</b>
+<b class="fc"><i class="no-highlight">25</i>&nbsp;        this.email = email;</b>
+<b class="fc"><i class="no-highlight">26</i>&nbsp;        this.DateOfBirth = date;</b>
+<b class="fc"><i class="no-highlight">27</i>&nbsp;        this.credentials = credentials;</b>
+<b class="fc"><i class="no-highlight">28</i>&nbsp;        this.Notification = new ArrayList&lt;&gt;();</b>
+<b class="fc"><i class="no-highlight">29</i>&nbsp;    }</b>
+<i class="no-highlight">30</i>&nbsp;
+<b class="fc"><i class="no-highlight">31</i>&nbsp;    public boolean login(String usernameInput, String passwordInput) { return (usernameInput.equals(this.getCredentials().getUsername()) &amp;&amp; passwordInput.equals(this.getCredentials().getPassword())); }</b>
+<i class="no-highlight">32</i>&nbsp;
+<b class="fc"><i class="no-highlight">33</i>&nbsp;    public void receiveNotification(Notification notification){this.getNotification().add(notification);}</b>
+<i class="no-highlight">34</i>&nbsp;
+<b class="fc"><i class="no-highlight">35</i>&nbsp;    public ArrayList&lt;Notification&gt; getNotification(){return Notification;}</b>
+<i class="no-highlight">36</i>&nbsp;
+<i class="no-highlight">37</i>&nbsp;    public String getFirstName() {
+<b class="fc"><i class="no-highlight">38</i>&nbsp;        return FirstName;</b>
+<i class="no-highlight">39</i>&nbsp;    }
+<i class="no-highlight">40</i>&nbsp;
+<i class="no-highlight">41</i>&nbsp;    public void setFirstName(String firstName) {
+<b class="fc"><i class="no-highlight">42</i>&nbsp;        FirstName = firstName;</b>
+<b class="fc"><i class="no-highlight">43</i>&nbsp;    }</b>
+<i class="no-highlight">44</i>&nbsp;
+<i class="no-highlight">45</i>&nbsp;    public String getLastName() {
+<b class="fc"><i class="no-highlight">46</i>&nbsp;        return LastName;</b>
+<i class="no-highlight">47</i>&nbsp;    }
+<i class="no-highlight">48</i>&nbsp;
+<i class="no-highlight">49</i>&nbsp;    public void setLastName(String lastName) {
+<b class="fc"><i class="no-highlight">50</i>&nbsp;        LastName = lastName;</b>
+<b class="fc"><i class="no-highlight">51</i>&nbsp;    }</b>
+<i class="no-highlight">52</i>&nbsp;
+<i class="no-highlight">53</i>&nbsp;    public String getPhoneNumber() {
+<b class="fc"><i class="no-highlight">54</i>&nbsp;        return phoneNumber;</b>
+<i class="no-highlight">55</i>&nbsp;    }
+<i class="no-highlight">56</i>&nbsp;
+<i class="no-highlight">57</i>&nbsp;    public void setPhoneNumber(String phoneNumber) {
+<b class="fc"><i class="no-highlight">58</i>&nbsp;        this.phoneNumber = phoneNumber;</b>
+<b class="fc"><i class="no-highlight">59</i>&nbsp;    }</b>
+<i class="no-highlight">60</i>&nbsp;
+<i class="no-highlight">61</i>&nbsp;    public void setEmail(String email) {
+<b class="fc"><i class="no-highlight">62</i>&nbsp;        this.email = email;</b>
+<b class="fc"><i class="no-highlight">63</i>&nbsp;    }</b>
+<i class="no-highlight">64</i>&nbsp;
+<i class="no-highlight">65</i>&nbsp;    public String getEmail() {
+<b class="fc"><i class="no-highlight">66</i>&nbsp;        return email;</b>
+<i class="no-highlight">67</i>&nbsp;    }
+<i class="no-highlight">68</i>&nbsp;
+<i class="no-highlight">69</i>&nbsp;    public Credentials getCredentials() {
+<b class="fc"><i class="no-highlight">70</i>&nbsp;        return credentials;</b>
+<i class="no-highlight">71</i>&nbsp;    }
+<i class="no-highlight">72</i>&nbsp;
+<i class="no-highlight">73</i>&nbsp;    public void setCredentials(Credentials credentials) {
+<b class="fc"><i class="no-highlight">74</i>&nbsp;        this.credentials = credentials;</b>
+<b class="fc"><i class="no-highlight">75</i>&nbsp;    }</b>
+<i class="no-highlight">76</i>&nbsp;
+<i class="no-highlight">77</i>&nbsp;    public LocalDate getDateOfBirth() {
+<b class="fc"><i class="no-highlight">78</i>&nbsp;        return DateOfBirth;</b>
+<i class="no-highlight">79</i>&nbsp;    }
+<i class="no-highlight">80</i>&nbsp;
+<i class="no-highlight">81</i>&nbsp;    public void setDateOfBirth(LocalDate dateOfBirth) {
+<b class="fc"><i class="no-highlight">82</i>&nbsp;        DateOfBirth = dateOfBirth;</b>
+<b class="fc"><i class="no-highlight">83</i>&nbsp;    }</b>
+<i class="no-highlight">84</i>&nbsp;
+<i class="no-highlight">85</i>&nbsp;    @Override
+<i class="no-highlight">86</i>&nbsp;    public String toString(){
+<b class="fc"><i class="no-highlight">87</i>&nbsp;        return &quot;UserDetails:&quot;+</b>
+<i class="no-highlight">88</i>&nbsp;                &quot;name=&#39;&quot; + FirstName + &#39;\&#39;&#39; +
+<i class="no-highlight">89</i>&nbsp;                &quot;, lastname=&#39;&quot; + LastName + &#39;\&#39;&#39; +
+<i class="no-highlight">90</i>&nbsp;                &quot;, phoneNumber=&#39;&quot; + phoneNumber + &#39;\&#39;&#39; +
+<i class="no-highlight">91</i>&nbsp;                &quot;, email=&#39;&quot; + email + &#39;\&#39;&#39; +
+<i class="no-highlight">92</i>&nbsp;                &quot;, birthDate=&quot; + DateOfBirth +
+<i class="no-highlight">93</i>&nbsp;                &quot;, credentials=&quot; + credentials +
+<i class="no-highlight">94</i>&nbsp;                &#39;}&#39;;
+<i class="no-highlight">95</i>&nbsp;    }
+<i class="no-highlight">96</i>&nbsp;
+<i class="no-highlight">97</i>&nbsp;    public boolean equals(Object other) {
+<b class="fc"><i class="no-highlight">98</i>&nbsp;        if (this == other)</b>
+<b class="fc"><i class="no-highlight">99</i>&nbsp;            return true;</b>
+<b class="fc"><i class="no-highlight">100</i>&nbsp;        if (other == null || getClass() != other.getClass())</b>
+<b class="nc"><i class="no-highlight">101</i>&nbsp;            return false;</b>
+<b class="fc"><i class="no-highlight">102</i>&nbsp;        boolean equal = false;</b>
+<b class="fc"><i class="no-highlight">103</i>&nbsp;        if (other instanceof User) {</b>
+<b class="fc"><i class="no-highlight">104</i>&nbsp;            User otherUser = (User) other;</b>
+<i class="no-highlight">105</i>&nbsp;
+<b class="fc"><i class="no-highlight">106</i>&nbsp;            if ((FirstName.equals(otherUser.FirstName) &amp;&amp; otherUser.FirstName != null)</b>
+<b class="fc"><i class="no-highlight">107</i>&nbsp;                    &amp;&amp; (LastName.equals(otherUser.LastName) &amp;&amp; otherUser.LastName != null)</b>
+<b class="fc"><i class="no-highlight">108</i>&nbsp;                    &amp;&amp; (phoneNumber.equals(otherUser.phoneNumber) &amp;&amp; otherUser.phoneNumber != null)</b>
+<b class="fc"><i class="no-highlight">109</i>&nbsp;                    &amp;&amp; (DateOfBirth.equals(otherUser.DateOfBirth) &amp;&amp; otherUser.DateOfBirth != null)</b>
+<b class="fc"><i class="no-highlight">110</i>&nbsp;                    &amp;&amp; (credentials.equals(otherUser.credentials) &amp;&amp; otherUser.credentials != null)</b>
+<b class="fc"><i class="no-highlight">111</i>&nbsp;                    &amp;&amp; (email.equals(otherUser.email) &amp;&amp; otherUser.email != null)</b>
+<b class="fc"><i class="no-highlight">112</i>&nbsp;                    &amp;&amp; (Notification.equals(otherUser.Notification) &amp;&amp; otherUser.Notification != null)</b>
+<i class="no-highlight">113</i>&nbsp;            )
+<b class="fc"><i class="no-highlight">114</i>&nbsp;                equal = true;</b>
+<i class="no-highlight">115</i>&nbsp;        }
+<b class="fc"><i class="no-highlight">116</i>&nbsp;        return equal;</b>
+<i class="no-highlight">117</i>&nbsp;    }
+<i class="no-highlight">118</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-05-16 20:35</div>
+</div>
+</body>
+</html>

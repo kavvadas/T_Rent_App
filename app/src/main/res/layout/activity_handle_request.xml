@@ -1,0 +1,118 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    tools:context=".view.Ad.HandleRequest.HandleRequestActivity">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#3F51B5"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="0dp">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:text="Renter"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/renter_sent_request_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:text="Appointment"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/appointment_sent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="2dp"
+            android:paddingBottom="32dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/accept_request"
+                    android:layout_width="140dp"
+                    android:layout_height="55dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Accept"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/decline_request"
+                    android:layout_width="140dp"
+                    android:layout_height="55dp"
+                    android:layout_toRightOf="@+id/accept_request"
+                    android:text="Decline"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"></TableRow>
+
+    </TableLayout>
+</ScrollView>

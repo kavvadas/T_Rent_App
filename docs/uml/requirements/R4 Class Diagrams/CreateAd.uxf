@@ -1,0 +1,99 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>740</x><y>90</y><w>280</w><h>30</h></coordinates><panel_attributes>androidx.lifecycle.CreateAdViewModel
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>860</x><y>110</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>770</x><y>206</y><w>250</w><h>120</h></coordinates><panel_attributes>CreateAdViewModel
+--
+~presenter:CreateAdPresenter
+--
++CreateAdViewModel()
++getPresenter():CreateAdPresenter
+#onCleared():void
+ 
+ 
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>880</x><y>320</y><w>80</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+presenter
+
+1</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>740</x><y>416</y><w>400</w><h>330</h></coordinates><panel_attributes>CreateAdPresenter
+--
+-view:CreateAdView
+-ownerDao:OwnerDao
+-owner:OwnerAccount
+-adDao:AdDao
+-adExists:Ad
+--
++CreateAdPresenter()
++savedInfo(String comment):void
++handleAdData(String title):void
++setOwnerDao(OwnerDao ownerDao):void
++setAdDao(AdDao adDao):void
++setView(CreateAdView view):void
++clearView():void
+-checkStreet(String val):boolean
+-checkPostcode(String val):boolean
+-checkRegion(String val):boolean
+-checkRent(String val):boolean
+-checkComment(String val):boolean
+-checkAppointments(ArrayList&lt;Appointment&gt; appointments):boolean
+
+
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1370</x><y>536</y><w>210</w><h>30</h></coordinates><panel_attributes>AdDao
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1130</x><y>520</y><w>260</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+περιέχει</panel_attributes><additional_attributes>240;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1392</x><y>616</y><w>210</w><h>30</h></coordinates><panel_attributes>OwnerDao
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1122</x><y>620</y><w>290</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+περιέχει</panel_attributes><additional_attributes>270;20;10;16</additional_attributes></element><element><id>Relation</id><coordinates><x>680</x><y>550</y><w>80</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>60;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>150</x><y>476</y><w>540</w><h>510</h></coordinates><panel_attributes>CreateAdActivity
+--
+~hourAdapter:ArrayAdapter&lt;String&gt;
+~chosen_hour_Adapter:ArrayAdapter&lt;String&gt;
+~chosen_day_Adapter:ArrayAdapter&lt;String&gt;
+~hours: ArrayList&lt;String&gt;
+~choose_days_calendar_view:CalendarView
+~choose_hours_list_view:ListView
+~chosen_days_list_view:ListView
+~chosen_hours_list_view:ListView
+~chosen_days:ArrayList&lt;String&gt;
+~chosen_hours:ArrayList&lt;String&gt;
+-OWNER_TITLE_EXTRA:String
+-AD_TITLE:String
+~viewModel:CreateAdViewModel
+-imagIs:ImageSwitcher
+-previous:Button
+-next:Button
+-addImage:Button
+-buttonCreateAd:Button
+-ownerT:String
+-adtitle:String
+-imageUris:ArrayList&lt;Uri&gt;
+-PICK_IMAGES_CODE:int
+~position:int
+--
+#onCreate(Bundle savedInstanceState):void
++onClick(View view):void
++choosePhoto():void
+-pickImagesIntent():void
+#onActivityResult(int requestCode, int resultCode, @Nullable Intent data):void
++setDates():void
++onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) :void
+ 
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>340</y><w>30</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>316</y><w>210</w><h>30</h></coordinates><panel_attributes>AppCompatActivity
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>1176</y><w>360</w><h>320</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+--
+CreateAdView
+--
+~getStreet():String
+~getPostcode():String
+~getRegion():String
+~getRent():String
+~getComment():String
+~getAppointments():ArrayList&lt;Appointment&gt;
+~getDescription():ArrayList&lt;String&gt;
+~setStreet(String street):void
+~setPostcode(String postcode):void
+~setRegion(String region):void
+~setRent(String rent):void
+~setComment(String comment):void
+~setAppointments(ArrayList&lt;Appointment&gt; appointments):void
+~showPop(CreateAdView view,String mess):void
+~toOwnerPage(String title):void
+~toAdPage(String comment,String title):void
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>680</x><y>970</y><w>40</w><h>230</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>20;210;10;16</additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>970</y><w>40</w><h>260</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>20;240;10;16</additional_attributes></element><element><id>UMLClass</id><coordinates><x>60</x><y>1206</y><w>210</w><h>60</h></coordinates><panel_attributes>&lt;&lt;layout&gt;&gt;
+--
+activity_create_ad.xml</panel_attributes><additional_attributes></additional_attributes></element></diagram>

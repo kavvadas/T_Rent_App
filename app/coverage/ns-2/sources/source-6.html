@@ -1,0 +1,194 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > OwnerAccount</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+    @import "../../.css/highlight-idea.css";
+  </style>
+  <script type="text/javascript" src="../../.js/highlight.pack.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">gr.aueb.sweng22.team11.domain</a>
+</div>
+
+<h1>Coverage Summary for Class: OwnerAccount (gr.aueb.sweng22.team11.domain)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">OwnerAccount</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (9/9)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    92.1%
+  </span>
+  <span class="absValue">
+    (35/38)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<div class="sourceCode" id="sourceCode"><i class="no-highlight">1</i>&nbsp;package gr.aueb.sweng22.team11.domain;
+<i class="no-highlight">2</i>&nbsp;import android.os.Build;
+<i class="no-highlight">3</i>&nbsp;
+<i class="no-highlight">4</i>&nbsp;import androidx.annotation.RequiresApi;
+<i class="no-highlight">5</i>&nbsp;
+<i class="no-highlight">6</i>&nbsp;import java.time.LocalDate;
+<i class="no-highlight">7</i>&nbsp;import java.util.ArrayList;
+<i class="no-highlight">8</i>&nbsp;import java.util.Iterator;
+<i class="no-highlight">9</i>&nbsp;
+<i class="no-highlight">10</i>&nbsp;public class OwnerAccount extends User{
+<i class="no-highlight">11</i>&nbsp;
+<b class="fc"><i class="no-highlight">12</i>&nbsp;    private ArrayList &lt;Ad&gt; ads = new ArrayList&lt;Ad&gt;(); //λίστα αγγελιών που έχει δημιουργήσει</b>
+<i class="no-highlight">13</i>&nbsp;
+<i class="no-highlight">14</i>&nbsp;    public OwnerAccount(){
+<b class="fc"><i class="no-highlight">15</i>&nbsp;        super();</b>
+<b class="fc"><i class="no-highlight">16</i>&nbsp;    }</b>
+<i class="no-highlight">17</i>&nbsp;
+<i class="no-highlight">18</i>&nbsp;    public OwnerAccount(String name, String last, String phone, String email, LocalDate date,Credentials credentials){
+<b class="fc"><i class="no-highlight">19</i>&nbsp;        super(name,last,phone,email,date,credentials);</b>
+<b class="fc"><i class="no-highlight">20</i>&nbsp;    }</b>
+<i class="no-highlight">21</i>&nbsp;    public House createHouse(String street, String postcode,String region, Double rent) //μέθοδος για τη κατασκευή της κατοικίας
+<i class="no-highlight">22</i>&nbsp;    {
+<b class="fc"><i class="no-highlight">23</i>&nbsp;        House input = new House();</b>
+<i class="no-highlight">24</i>&nbsp;
+<b class="fc"><i class="no-highlight">25</i>&nbsp;        if(street != null &amp;&amp; postcode != null &amp;&amp; region != null &amp;&amp; rent != null)</b>
+<i class="no-highlight">26</i>&nbsp;        {
+<b class="fc"><i class="no-highlight">27</i>&nbsp;            input.setStreet(street);</b>
+<b class="fc"><i class="no-highlight">28</i>&nbsp;            input.setPostcode(postcode);</b>
+<b class="fc"><i class="no-highlight">29</i>&nbsp;            input.setRegion(region);</b>
+<b class="fc"><i class="no-highlight">30</i>&nbsp;            input.setRent(rent);</b>
+<i class="no-highlight">31</i>&nbsp;        }
+<b class="fc"><i class="no-highlight">32</i>&nbsp;        return input;</b>
+<i class="no-highlight">33</i>&nbsp;    }
+<i class="no-highlight">34</i>&nbsp;
+<i class="no-highlight">35</i>&nbsp;    public void createAndSaveAd(Ad ad){ //όταν ο ιδιοκτήτης φτιάξει όλα τα στοιχεία της αγγελίας του, αποθηκεύεται στη λίστα αγγελιών του
+<b class="fc"><i class="no-highlight">36</i>&nbsp;        if(ad==null){</b>
+<b class="fc"><i class="no-highlight">37</i>&nbsp;            return;</b>
+<i class="no-highlight">38</i>&nbsp;        }
+<b class="fc"><i class="no-highlight">39</i>&nbsp;        if(!ads.contains(ad)){</b>
+<b class="fc"><i class="no-highlight">40</i>&nbsp;            ads.add(ad);</b>
+<i class="no-highlight">41</i>&nbsp;        }
+<b class="fc"><i class="no-highlight">42</i>&nbsp;    }</b>
+<i class="no-highlight">43</i>&nbsp;
+<i class="no-highlight">44</i>&nbsp;    public void removeAd(Ad ad){ //αντίστοιχα αφαιρούμε από τη λίστα
+<b class="fc"><i class="no-highlight">45</i>&nbsp;        if(ad == null){</b>
+<b class="fc"><i class="no-highlight">46</i>&nbsp;            return;</b>
+<i class="no-highlight">47</i>&nbsp;        }
+<b class="fc"><i class="no-highlight">48</i>&nbsp;        if(!ads.contains(ad)){</b>
+<b class="nc"><i class="no-highlight">49</i>&nbsp;            return;</b>
+<i class="no-highlight">50</i>&nbsp;        }
+<b class="fc"><i class="no-highlight">51</i>&nbsp;        ads.remove(ad);</b>
+<b class="fc"><i class="no-highlight">52</i>&nbsp;    }</b>
+<i class="no-highlight">53</i>&nbsp;
+<i class="no-highlight">54</i>&nbsp;
+<i class="no-highlight">55</i>&nbsp;    @RequiresApi(api = Build.VERSION_CODES.O)
+<i class="no-highlight">56</i>&nbsp;    public void payDebt(Ad ad){
+<i class="no-highlight">57</i>&nbsp;        /*if(!ad.checkForPricing()) {
+<i class="no-highlight">58</i>&nbsp;            return;
+<i class="no-highlight">59</i>&nbsp;        }*/
+<b class="fc"><i class="no-highlight">60</i>&nbsp;        if(!ad.getPrice().getIsPaid()){</b>
+<b class="fc"><i class="no-highlight">61</i>&nbsp;           ad.getPrice().setIsPaid();</b>
+<i class="no-highlight">62</i>&nbsp;        }
+<b class="fc"><i class="no-highlight">63</i>&nbsp;    }</b>
+<i class="no-highlight">64</i>&nbsp;
+<i class="no-highlight">65</i>&nbsp;    public ArrayList&lt;Ad&gt; getAds() {
+<b class="fc"><i class="no-highlight">66</i>&nbsp;        return ads;</b>
+<i class="no-highlight">67</i>&nbsp;    }
+<i class="no-highlight">68</i>&nbsp;
+<i class="no-highlight">69</i>&nbsp;    public String toString(){
+<b class="fc"><i class="no-highlight">70</i>&nbsp;        return &quot;Owner{&quot;+</b>
+<b class="fc"><i class="no-highlight">71</i>&nbsp;                &quot;username=&#39;&quot; + this.getCredentials().getUsername() + &#39;\&#39;&#39; +</b>
+<i class="no-highlight">72</i>&nbsp;                &quot;}&quot;;
+<i class="no-highlight">73</i>&nbsp;    }
+<i class="no-highlight">74</i>&nbsp;
+<i class="no-highlight">75</i>&nbsp;    public boolean equals(Object other) {
+<b class="fc"><i class="no-highlight">76</i>&nbsp;        if (other == this)</b>
+<b class="fc"><i class="no-highlight">77</i>&nbsp;            return true;</b>
+<i class="no-highlight">78</i>&nbsp;
+<b class="fc"><i class="no-highlight">79</i>&nbsp;        if (other == null)</b>
+<b class="nc"><i class="no-highlight">80</i>&nbsp;            return false;</b>
+<i class="no-highlight">81</i>&nbsp;
+<b class="fc"><i class="no-highlight">82</i>&nbsp;        if (other instanceof OwnerAccount) {</b>
+<b class="fc"><i class="no-highlight">83</i>&nbsp;            OwnerAccount otherOwner = (OwnerAccount) other;</b>
+<b class="fc"><i class="no-highlight">84</i>&nbsp;            if (ads.equals(otherOwner.ads) &amp;&amp; otherOwner.ads != null)</b>
+<b class="nc"><i class="no-highlight">85</i>&nbsp;                return true;</b>
+<i class="no-highlight">86</i>&nbsp;        }
+<b class="fc"><i class="no-highlight">87</i>&nbsp;        return false;</b>
+<i class="no-highlight">88</i>&nbsp;    }
+<i class="no-highlight">89</i>&nbsp;}
+</div>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+        var codeBlock = document.getElementById('sourceCode');
+
+        if (codeBlock) {
+            hljs.highlightBlock(codeBlock);
+        }
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2022-05-16 20:35</div>
+</div>
+</body>
+</html>

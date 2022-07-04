@@ -1,0 +1,79 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>520</x><y>100</y><w>280</w><h>30</h></coordinates><panel_attributes>androidx.lifecycle.OwnerPageViewModel
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>120</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>216</y><w>250</w><h>100</h></coordinates><panel_attributes>OwnerPageViewModel
+--
+~presenter:OwnerPagePresenter
+--
++OwnerPageViewModel()
++getPresenter():OwnerPagePresenter
+#onCleared():void
+ 
+ 
+ 
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>310</y><w>80</w><h>140</h></coordinates><panel_attributes>lt=&lt;-
+presenter
+
+1</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>500</x><y>426</y><w>340</w><h>290</h></coordinates><panel_attributes>OwnerPagePresenter
+--
+-view:OwnerPageView
+-loginDao:LoginDao
+-owner:OwnerAccount
+-ownerDao:OwnerDao
+--
++OwnerPagePresenter()
++findOwnerInfo(String title):void
++getOwnerTitle():String
++setOwner(User user):void
++setOwnerDao(OwnerDao ownerDao):void
++setLoginDao(LoginDao loginDao):void
++onOwnerAccount():void
++onOwnerAds():void
++onLogout():void
++onNoLogout():void
++onYesLogout():void
++setView(OwnerPageView view):void
++clearView():void
+
+
+
+
+
+
+
+ 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>822</x><y>500</y><w>190</w><h>50</h></coordinates><panel_attributes>lt=&lt;.
+περιέχει</panel_attributes><additional_attributes>170;20;10;26</additional_attributes></element><element><id>UMLClass</id><coordinates><x>992</x><y>506</y><w>210</w><h>30</h></coordinates><panel_attributes>OwnerDao
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>560</y><w>160</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>496</y><w>250</w><h>210</h></coordinates><panel_attributes>OwnerPageActivity
+--
+-viewModel:OwnerPageViewModel
+-OWNER_TITLE_EXTRA:String
+-POPUP:AlertDialog
+-ownerUsername:String
+-txtOwnerName:TextView
+-btnOwnerAccount:Button
+-btnOwnerAds:Button
+-btnLogOut:Button
+--
+#onCreate(Bundle savedInstanceState):void
++onBackPressed():void
+
+ 
+
+ 
+ 
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>350</y><w>30</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>140</x><y>326</y><w>210</w><h>30</h></coordinates><panel_attributes>AppCompatActivity
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>690</y><w>140</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>120;160;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>846</y><w>250</w><h>160</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+--
+OwnerPageView
+--
+~toOwnerAccount():void
+~toOwnerAds(String title):void
+~logout():void
+~showPopUp(int layoutId, String msg, int btn1, int btn2):AlertDialog
+~logOutConfirmation():void
+~noLogOut():void
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>866</y><w>210</w><h>60</h></coordinates><panel_attributes>&lt;&lt;layout&gt;&gt;
+--
+activity_owner_page.xml</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>690</y><w>90</w><h>200</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;180;70;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>992</x><y>586</y><w>210</w><h>30</h></coordinates><panel_attributes>LoginDao
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>832</x><y>590</y><w>180</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+περιέχει</panel_attributes><additional_attributes>160;20;10;16</additional_attributes></element></diagram>

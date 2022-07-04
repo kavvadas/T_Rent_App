@@ -1,0 +1,69 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;490&lt;/x&gt;&lt;y&gt;10&lt;/y&gt;&lt;w&gt;280&lt;/w&gt;&lt;h&gt;30&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;androidx.lifecycle.HandleRequestViewModel
+ &lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;element&gt;&lt;id&gt;Relation&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;792&lt;/x&gt;&lt;y&gt;530&lt;/y&gt;&lt;w&gt;160&lt;/w&gt;&lt;h&gt;50&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;lt=&amp;lt;.
+περιέχει&lt;/panel_attributes&gt;&lt;additional_attributes&gt;140;20;10;26&lt;/additional_attributes&gt;&lt;/element&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;932&lt;/x&gt;&lt;y&gt;526&lt;/y&gt;&lt;w&gt;210&lt;/w&gt;&lt;h&gt;30&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;RequestDao
+ &lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>490</x><y>0</y><w>280</w><h>30</h></coordinates><panel_attributes>androidx.lifecycle.HandleRequestViewModel
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>20</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>116</y><w>250</w><h>120</h></coordinates><panel_attributes>HandleRequestViewModel
+--
+~presenter:HandleRequestPresenter
+--
++HandleRequestViewModel()
++getPresenter():HandleRequestPresenter
+#onCleared():void
+ 
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>230</y><w>80</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+presenter
+
+1</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>470</x><y>326</y><w>340</w><h>250</h></coordinates><panel_attributes>HandleRequestPresenter
+--
+-view: HandleRequestView
+-request: Request
+-requestDao:RequestDao
+-appointmentDao:AppointmentDao
+--
++HandleRequestPresenter()
++findRequestInfo(String apppoint,String nickname,String title):void
++onAcceptRequest(int position):void
++onDeclineRequest(int position):void
++setRequestDao(RequestDao requestDao):void
++setAdDao(AdDao adDao):void
++setAppointmentDao(AppointmentDao appointmentDao):void
++setView(HandleRequestView view):void
++clearView():void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>430</y><w>160</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+περιέχει</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>940</x><y>446</y><w>210</w><h>30</h></coordinates><panel_attributes>AdDao
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>932</x><y>516</y><w>210</w><h>30</h></coordinates><panel_attributes>RequestDao
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>792</x><y>520</y><w>160</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+περιέχει</panel_attributes><additional_attributes>140;20;10;16</additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>460</y><w>160</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>396</y><w>250</w><h>240</h></coordinates><panel_attributes>HandleRequestActivity
+--
+~viewModel:HandleRequestViewModel
++AD_TITLE:String
++OWNER_TITLE_EXTRA:String
++RENTER_NICKNAME_EXTRA:String
++APPOINTMENT_EXTRA:String
++POSITION_EXTRA:String
+~adT:String
+~appoint:String
+~nickname:String
+~position:int
+~buttonAccept:Button
+~buttonDecline:Button
+--
+#onCreate(Bundle savedInstanceState):void
+ 
+ 
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>250</y><w>30</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>110</x><y>226</y><w>210</w><h>30</h></coordinates><panel_attributes>AppCompatActivity
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>260</x><y>620</y><w>130</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>110;40;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>240</x><y>656</y><w>250</w><h>110</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+--
+HandleRequestView
+--
+~setRenter(String renter):void
+~setAppointment(String appointment):void
+~startAcceptRequest(String title):void
+~startDeclineRequest(String title):void
+ 
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>620</y><w>60</w><h>80</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;60;40;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>676</y><w>210</w><h>60</h></coordinates><panel_attributes>&lt;&lt;layout&gt;&gt;
+--
+activity_handle_request.xml</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>940</x><y>376</y><w>210</w><h>30</h></coordinates><panel_attributes>AppointmentDao
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>370</y><w>160</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+περιέχει</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element></diagram>

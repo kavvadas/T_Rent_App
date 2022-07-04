@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#009688"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:context=".view.RenterRegister">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="166dp"
+            android:contentDescription="@string/descriptionForOwnerPicture"
+            app:srcCompat="@drawable/hhh"
+            tools:ignore="ImageContrastCheck" />
+
+
+        <TextView
+            android:id="@+id/renter_register_message"
+            android:layout_width="wrap_content"
+            android:layout_height="66dp"
+            android:layout_marginTop="-5dp"
+            android:text="RenterFillMessage"
+            android:textColor="#2196F3"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            tools:ignore="TextContrastCheck" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nickName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:hint="nickName"
+                android:textColorHint="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/firstName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/first_name_fill"
+                android:textColorHint="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#FFFFFF"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lastName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/last_name_fill"
+                android:textColorHint="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FFFFFF"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/email_fill"
+                android:textColorHint="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FFFFFF"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phone"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/phone_fill"
+                android:textColorHint="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FFFFFF"
+                    android:inputType="number"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/datePickerButton"
+                style="?android:spinnerStyle"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="openBirthDatePicker"
+                android:text="@string/date_fill"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/username"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/UsernameString"
+                android:textColorHint="#000000"
+                app:counterEnabled="true"
+                app:counterMaxLength="20">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FFFFFF"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    tools:ignore="TextContrastCheck" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/PasswordString"
+                android:textColorHint="#000000"
+                app:counterEnabled="true"
+                app:counterMaxLength="20"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FFFFFF"
+                    android:inputType="textPassword"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    tools:ignore="TextContrastCheck" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordConfirm"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/ReEnterPasswordString"
+                android:textColorHint="#000000"
+                app:counterEnabled="true"
+                app:counterMaxLength="20"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FFFFFF"
+                    android:inputType="textPassword"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    tools:ignore="TextContrastCheck" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/verificationButton"
+            android:layout_width="346dp"
+            android:layout_height="61dp"
+            android:backgroundTint="#2196F3"
+            android:onClick="registerRenter"
+            android:text="@string/Email_verification"
+            android:textColor="#FFFFFF"
+            app:rippleColor="#FFFFFF"
+            app:strokeColor="#FFF2F2"
+            tools:ignore="TextContrastCheck" />
+
+
+    </LinearLayout>
+</ScrollView>

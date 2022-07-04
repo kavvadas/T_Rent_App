@@ -1,0 +1,56 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>490</x><y>10</y><w>280</w><h>30</h></coordinates><panel_attributes>androidx.lifecycle.AdRequestsViewModel
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>30</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>126</y><w>250</w><h>120</h></coordinates><panel_attributes>AdRequestsViewModel
+--
+presenter:AdRequestsPresenter
+--
++AdRequestsViewModel()
++getPresenter():AdRequestsPresenter
+#onCleared():void
+ 
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>240</y><w>80</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+presenter
+
+1</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>470</x><y>336</y><w>340</w><h>220</h></coordinates><panel_attributes>AdRequestsPresenter
+--
+~view:AdRequestsView
+-ad_title:String
+-adDao:AdDao
+-requestDao:RequestDao
+-requests:ArrayList&lt;Request&gt;
+--
++AdRequestsPresenter()
++findRequestsSent(String title):void
++getRequests():ArrayList&lt;Request&gt;
++setView(AdRequestsView view):void
++clearView():void
++setAdDao(AdDao adDao):void
++setRequestDao(RequestDao requestDao):void
+ 
+ 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>440</y><w>160</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+περιέχει</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>940</x><y>456</y><w>210</w><h>30</h></coordinates><panel_attributes>AdDao
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>470</y><w>160</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>406</y><w>250</w><h>190</h></coordinates><panel_attributes>AdRequestsActivity
+--
++AD_TITLE:String
++RENTER_NICKNAME_EXTRA:String
++APPOINTMENTS_EXTRA:String
++POSITION_EXTRA:String
+~adTitle:String
+~viewModel:AdRequestsViewModel
+--
+#onCreate(Bundle savedInstanceState):void
++onListFragmentInteraction(Request item,int position):void
++getListRequest():ArrayList&lt;Request&gt;
+ 
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>260</y><w>30</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>110</x><y>236</y><w>210</w><h>30</h></coordinates><panel_attributes>AppCompatActivity
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>580</y><w>60</w><h>130</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;110;40;10</additional_attributes></element><element><id>Relation</id><coordinates><x>260</x><y>580</y><w>130</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>110;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>240</x><y>666</y><w>250</w><h>50</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+--
+AdRequestsView
+ 
+ 
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>686</y><w>210</w><h>60</h></coordinates><panel_attributes>&lt;&lt;layout&gt;&gt;
+--
+activity_ad_requests .xml</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>792</x><y>530</y><w>160</w><h>50</h></coordinates><panel_attributes>lt=&lt;.
+περιέχει</panel_attributes><additional_attributes>140;20;10;26</additional_attributes></element><element><id>UMLClass</id><coordinates><x>932</x><y>526</y><w>210</w><h>30</h></coordinates><panel_attributes>RequestDao
+ </panel_attributes><additional_attributes></additional_attributes></element></diagram>

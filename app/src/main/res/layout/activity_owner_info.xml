@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#3F51B5"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="0dp">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:text="username"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/text_username"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:text="password"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/text_password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:text="name"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:text="Lastname"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/text_lastname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:text="PhoneNumber"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/text_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:text="Email"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/text_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:text="Title"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:text="BirthDate"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/text_birth_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="2dp"
+            android:paddingBottom="32dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/delete_owner"
+                    android:layout_width="140dp"
+                    android:layout_height="55dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Delete"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/edit_owner"
+                    android:layout_width="140dp"
+                    android:layout_height="55dp"
+                    android:layout_toRightOf="@+id/delete_owner"
+                    android:text="Edit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"></TableRow>
+
+    </TableLayout>
+</ScrollView>

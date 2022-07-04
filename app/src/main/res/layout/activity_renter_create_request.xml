@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#009688"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".view.Renter.RenterCreateRequest.RenterCreateRequestActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#2196F3"
+        android:text="Ad's Information"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp">
+
+
+    </TextView>
+
+    <TableLayout
+        android:id="@+id/table_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#009688"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="0dp">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#009688"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:text="Title"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/ads_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#009688"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#009688"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:text="Owner"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/ads_owner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#009688"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:text="@string/region"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/ads_region"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#009688"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:text="@string/street"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/ads_street"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#009688"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:text="@string/postcode"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/ads_postcode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#009688"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:text="@string/rent"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/ads_rent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#009688"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:text="Comments"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/ads_comment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </TableRow>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="#2196F3"
+            android:text="Choose appointment"
+            android:textColor="#FFFFFF"
+            android:textSize="15dp"
+            tools:ignore="TextContrastCheck">
+
+        </TextView>
+
+
+        <ListView
+            android:id="@+id/ad_dates"
+            android:layout_width="140dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="10dp"
+            android:background="#009688">
+
+        </ListView>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:background="#2196F3"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:background="#009688"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:text="Appointment"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/chosen_appointment"
+                android:layout_width="177dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#009688"
+                android:gravity="left"
+                android:maxLines="1"
+                android:paddingRight="20dp"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/saveRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:backgroundTint="#2196F3"
+        android:text="Send Request"
+        android:textColor="#FFFFFF" />
+
+
+</LinearLayout>

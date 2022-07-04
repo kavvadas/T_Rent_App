@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3F51B5"
+    android:orientation="vertical"
+    tools:context=".view.Ad.AdPage.AdPageActivity">
+
+    <TextView
+        android:id="@+id/title_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="name_ad"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="describeBlue"
+        app:srcCompat="@drawable/green" />
+
+    <TextView
+        android:id="@+id/ownerMenuMessage"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginTop="-5dp"
+        android:text="ChooseFromMenuMessage"
+        android:textColor="#09A596"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        tools:ignore="TextContrastCheck" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/OwnerHomePage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#089A8C"
+            android:text="MyHomePage"
+            android:textColor="#FFFFFF"
+            app:rippleColor="#2196F3"
+            app:strokeColor="#2196F3"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/editAdButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#089A8C"
+            android:text="Info"
+            android:textColor="#FFFFFF"
+            app:rippleColor="#2196F3"
+            app:strokeColor="#2196F3"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/myRequestsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#089A8C"
+            android:text="myRequests"
+            android:textColor="#FFFFFF"
+            app:rippleColor="#2196F3"
+            app:strokeColor="#2196F3"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/adAppointments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#089A8C"
+            android:text="myAppointments"
+            android:textColor="#FFFFFF"
+            app:rippleColor="#2196F3"
+            app:strokeColor="#2196F3"
+            tools:ignore="TextContrastCheck" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

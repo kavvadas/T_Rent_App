@@ -1,0 +1,58 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>280</x><y>670</y><w>210</w><h>50</h></coordinates><panel_attributes>Λογαριασμός Ιδιοκτήτη
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1210</x><y>940</y><w>210</w><h>110</h></coordinates><panel_attributes>Αίτημα
+--
+username: String
+id: String
+DateSent: Date()
+/accepted: boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1210</x><y>670</y><w>210</w><h>60</h></coordinates><panel_attributes>Λογαριασμός Ενοικιαστή
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>740</x><y>1080</y><w>210</w><h>80</h></coordinates><panel_attributes>Ραντεβού
+--
+DateDesired: Date()
+TimeOfMeetingDesired: Time() </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>960</x><y>80</y><w>210</w><h>80</h></coordinates><panel_attributes>Ειδοποιήση
+--
+typeOfMessage: String
+DateOfNotification: Date()
+content: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>620</x><y>670</y><w>210</w><h>70</h></coordinates><panel_attributes>Τίμημα
+--
+price: Double
+inTime: boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>450</y><w>490</w><h>240</h></coordinates><panel_attributes> </panel_attributes><additional_attributes>470;20;10;20;10;220</additional_attributes></element><element><id>Relation</id><coordinates><x>820</x><y>450</y><w>520</w><h>240</h></coordinates><panel_attributes> </panel_attributes><additional_attributes>10;20;500;20;500;220</additional_attributes></element><element><id>UMLClass</id><coordinates><x>750</x><y>280</y><w>210</w><h>160</h></coordinates><panel_attributes>Λογαριασμός
+--
+username:String
+password:String
+FirstName:String
+LastName:String
+phoneNumber:String
+email:String
+DateOfBirth: Date()
+/age: Integer</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>970</y><w>200</w><h>110</h></coordinates><panel_attributes>Αγγελία
+--
+id:int
+house:Κατοικία
+date:Ραντεβού
+/availability: boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>454</x><y>730</y><w>280</w><h>260</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=0...1</panel_attributes><additional_attributes>10;240;10;100;240;100;240;10</additional_attributes></element><element><id>Relation</id><coordinates><x>834</x><y>110</y><w>150</w><h>190</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=1
+receives &gt;</panel_attributes><additional_attributes>130;20;10;20;10;170</additional_attributes></element><element><id>Relation</id><coordinates><x>364</x><y>880</y><w>40</w><h>110</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>464</x><y>1050</y><w>350</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1..*          </panel_attributes><additional_attributes>10;10;280;10;280;30</additional_attributes></element><element><id>Relation</id><coordinates><x>924</x><y>1030</y><w>310</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1</panel_attributes><additional_attributes>290;10;10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>1314</x><y>720</y><w>80</w><h>240</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+&lt; sends</panel_attributes><additional_attributes>10;10;10;220</additional_attributes></element><element><id>Relation</id><coordinates><x>464</x><y>1000</y><w>770</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2= 1
+references &gt;</panel_attributes><additional_attributes>10;20;750;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>790</y><w>170</w><h>100</h></coordinates><panel_attributes>Κατοικία
+--
+street:String
+postcode:String
+region:String
+rent:Double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>344</x><y>710</y><w>80</w><h>100</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+&lt; creates</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>848</x><y>432</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element></diagram>

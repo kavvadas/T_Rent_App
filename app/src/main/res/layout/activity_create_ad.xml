@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#E0FFFC"
+    tools:context=".view.Owner.CreateAd.CreateAdActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageSwitcher
+            android:id="@+id/imageIs"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="50dp" />
+
+        <Button
+            android:id="@+id/previousImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageIs"
+            android:backgroundTint="#009688"
+            android:text="@string/previousImageButton"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/nextImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageIs"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="#009688"
+            android:text="@string/nextImageButton"
+            android:textColor="#FFFFFF"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/AddImageButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#009688"
+            android:text="@string/addImageButton"
+            android:textColor="#FFFFFF"
+            tools:ignore="TextContrastCheck" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/previousImageButton"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fill_house_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D5F3F0"
+                android:text="@string/fill_house_s_details_for_ad"
+                android:textColor="#000000"
+                android:textSize="25sp" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fill_street"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/street"
+                android:textColorHint="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FFFFFF"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/postcode_fill"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/postcode"
+                android:textColorHint="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FFFFFF"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/region_fill"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/region"
+                android:textColorHint="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FFFFFF"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/rent_fill"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/rent"
+                android:textColorHint="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FFFFFF"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/comment_fill"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/comment"
+                android:textColorHint="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FFFFFF"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/chooseHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="#D5F3F0"
+                android:text="@string/choose_hours_for_appointments"
+                android:textColor="#000000"
+                android:textSize="25sp" />
+
+            <ListView
+                android:id="@+id/list_view_for_hours"
+                android:layout_width="383dp"
+                android:layout_height="800dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:id="@+id/chooseDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D5F3F0"
+                android:text="@string/choose_days_for_appointments"
+                android:textColor="#000000"
+                android:textSize="25sp" />
+
+            <CalendarView
+                android:id="@+id/calendar_for_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/chosenHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D5F3F0"
+                android:text="@string/chosen_hours_tap_to_remove"
+                android:textColor="#000000"
+                android:textSize="25sp" />
+
+
+            <ListView
+                android:id="@+id/list_view_for_chosen_hours"
+                android:layout_width="match_parent"
+                android:layout_height="800dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:id="@+id/chosenDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D5F3F0"
+                android:text="@string/chosen_days_tap_to_remove"
+                android:textColor="#000000"
+                android:textSize="25sp" />
+
+            <ListView
+                android:id="@+id/list_view_for_chosen_days"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                tools:ignore="NestedScrolling" />
+
+
+            <Button
+                android:id="@+id/CreateNewAdButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="#009688"
+                android:text="@string/create_new_ad"
+                android:textColor="#FFFFFF"
+                app:rippleColor="#FFFFFF"
+                app:strokeColor="#FFF2F2"
+                tools:ignore="TextContrastCheck" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

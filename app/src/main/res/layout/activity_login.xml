@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F3F4"
+    android:backgroundTint="#FFFFFF"
+    android:focusableInTouchMode="false"
+    android:foregroundTint="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="25dp"
+    tools:context=".view.User.Login.LoginActivity">
+
+
+    <ImageView
+        android:id="@+id/housePicture"
+        android:layout_width="wrap_content"
+        android:layout_height="137dp"
+        android:contentDescription="@string/houseDescribe"
+        app:srcCompat="@drawable/_01_2014406_home_logo_png_blue"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="62dp"
+        android:layout_marginTop="-10dp"
+        android:text="@string/WelcomeMessage"
+        android:textColor="#2196F3"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SignInMessage"
+        android:textColor="#2196F3"
+        android:textSize="25sp"
+        tools:ignore="TextContrastCheck" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/UsernameString"
+            android:textColorHint="#000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFFFFF"
+                android:inputType="text"
+                android:textColorHint="#000000"
+                android:textColor="#000000"
+                tools:ignore="TextContrastCheck" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/PasswordString"
+            app:passwordToggleEnabled="true"
+            android:textColorHint="#000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FDFDFD"
+                android:inputType="textPassword"
+                android:textColorHint="#000000"
+                android:textColor="#000000"
+                tools:ignore="TextContrastCheck" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/termsCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terms and Conditions" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/completeLogin"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:backgroundTint="#1F91EC"
+        android:text="@string/Start_Button"
+        android:textColor="#FFFFFF"
+        app:rippleColor="#FFFFFF"
+        app:strokeColor="#FFF2F2"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="364dp"
+        android:layout_height="60dp"
+        android:text="@string/NoAccount"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/owner_register_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#1884DA"
+        android:text="@string/ownerRegister"
+        android:textColor="#FFFFFF"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/renter_register_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#1588E3"
+        android:text="@string/renterRegister"
+        android:textColor="#FFFFFF"
+        tools:ignore="TextContrastCheck" />
+
+</LinearLayout>

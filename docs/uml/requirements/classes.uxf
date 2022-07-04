@@ -1,0 +1,168 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>763</x><y>0</y><w>350</w><h>380</h></coordinates><panel_attributes>User
+--
+-credentials:Credentials
+-FirstName:String
+-LastName:String
+-phoneNumber:String
+-email:String
+-DateOfBirth:LocalDate
+-Notifications: ArrayList&lt;Notification&gt;
+--
++getCredentials():Credentials
++setCredentials(Credentials cred):void
++getName():String
++setName(String name):void
++getLastName():String
++setLastName(String lastname):void
++getPhoneNumber():String
++setPhoneNumber(String number):void
++getEmail():String
++setEmail(String email):void
++getDate():LocalDate
++setDate(LocalDate date):void
++login(String usernameInput, String passwordInput): boolean
++receiveNotification(Noification notification):void
++getNotification():ArrayList&lt;Notification&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>383</x><y>20</y><w>230</w><h>150</h></coordinates><panel_attributes>credentials
+--
+-username:String
+-password:String
+--
++getUsername(): String
++setUsername(String username):void
++getPassword():String
++setPassword(String password):void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>393</x><y>640</y><w>220</w><h>220</h></coordinates><panel_attributes>House
+--
+-street:String
+-postcode:String
+-region:String
+-rent:Double
+--
++getStreet():String
++setStreet(String street):void
++getPostCode():String 
++setPostCode(String postcode):void
++getRegion():String
++setRegion(String region):void
++getRent():Double
++setRent(Double rent):void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>373</x><y>940</y><w>240</w><h>280</h></coordinates><panel_attributes>Ad
+--
+-owner:OwnerAccount
+-house:House
+-availability: boolean
+-requests:ArrayList&lt;Request&gt;
+-dateCreated:Date()
+--
++acceptRequest(Request request):void
++declineRequest(Request request):void
++addRenter(RentAccount renter,
+                    Appointment appointment):void
++getHouse():Κατοικια
++setHouse(Κατοικια house):void
++getAvailability():Boolean
++setAvailability(Boolean availability):void
++getDateCreated():LocalDate
++getComment():String
++setComment(String comment):void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>983</x><y>670</y><w>210</w><h>180</h></coordinates><panel_attributes>Appointment
+--
+-DateDesired: Date()
+-TimeOfMeetingDesired: Time() 
+-available:boolean
+--
++getDate():Date
++setDate(Date date):void
++getTime():Time
++setTime(Time time):void
++setTaken():void
++getAvailable():boolean
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1073</x><y>950</y><w>270</w><h>240</h></coordinates><panel_attributes>Request
+--
+-renter:RentAccount
+-Appointment appointment
+-DateSent: LocalDate
+-pending:Boolean
+-accepted:Boolean
+--
++getDate():Local Date
++getRenter():Renter
++setRenter(Renter renter):void
++getAppointment():Appointment
++setAppointment(Appointment appointment):void
++isPending():Boolean
++isAccepted():Boolean
++setAccepted(Boolean accepted):void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>273</x><y>260</y><w>460</w><h>290</h></coordinates><panel_attributes>OwnerAccount
+--
+-title:String
+-ads:ArrayList&lt;Ad&gt;
+-appointments:ArrayList&lt;Appointment&gt;
+-debts:ArrayList&lt;Debts&gt;
+--
++createHouse(String street, String postcode,String region, Double rent): House
++createAd(House house):void
++removeAd(Ad ad):void
++setAds(ArrayList&lt;Ad&gt; ads): void
++getAds():Arraylist&lt;Ad&gt;
++acceptRequest(Ad ad,Request request):void
++declineRequest(Ad ad,Request request):void
++getAppointments():ArrayList&lt;Appointment&gt;
++setDebts(ArrayList&lt;Pricing&gt; debts): void
++getDebts():ArrayList&lt;Pricing&gt;
++payDebt(Pricing t): void
++getTitle():String
++setTitle(String title): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1133</x><y>410</y><w>310</w><h>200</h></coordinates><panel_attributes>RentAccount
+--
+-adsInterested:Arraylist&lt;Ad&gt;
+-favorites:ArrayList&lt;Ad&gt;
+-notifications:ArrayList&lt;Notification&gt;
+-appointments:ArrayList&lt;Appointments&gt;
+--
++sendRequest(Ad ad,Appointment appointment):void
++removeFavorite(Ad ad):void
++getAppointments():ArrayList&lt;Appointment&gt;
++addFavorite(Ad ad):void
++getFavorites():ArrayList&lt;Ad&gt;
++getAds():ArrayList&lt;Ad&gt;
++addAppointment(Appointment appointment):void
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1123</x><y>840</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1223</x><y>600</y><w>60</w><h>370</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+sends </panel_attributes><additional_attributes>10;350;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>603</x><y>1030</y><w>490</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+references &gt;</panel_attributes><additional_attributes>10;20;470;20</additional_attributes></element><element><id>Relation</id><coordinates><x>413</x><y>540</y><w>80</w><h>120</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=*
+&lt; creates</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>723</x><y>372</y><w>190</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>170;10;170;90;10;88</additional_attributes></element><element><id>Relation</id><coordinates><x>883</x><y>372</y><w>270</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;90;250;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>103</x><y>580</y><w>210</w><h>130</h></coordinates><panel_attributes>Pricing
+--
+price: Double
+paid: boolean
+--
+getPrice():int
+setPrice():void
+getIsPaid():boolean
+setIsPaid():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>473</x><y>850</y><w>40</w><h>110</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1213</x><y>60</y><w>210</w><h>140</h></coordinates><panel_attributes>Notification
+--
+-DateOfNotification: LocalDate
+-content: String
+--
++setContent(String content):void
++getContent():String
++setDate(LocalDate DateOfNotification):void
++getDate():LocalDate</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1103</x><y>110</y><w>130</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=*
+m2=1
+   receives &gt;</panel_attributes><additional_attributes>110;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>603</x><y>110</y><w>180</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>160;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>153</x><y>700</y><w>240</w><h>440</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>220;420;10;420;10;10</additional_attributes></element></diagram>

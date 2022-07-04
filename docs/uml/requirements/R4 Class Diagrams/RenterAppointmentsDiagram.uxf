@@ -1,0 +1,59 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>550</x><y>38</y><w>280</w><h>30</h></coordinates><panel_attributes>androidx.lifecycle.RenterAppointmentsViewModel
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>580</x><y>154</y><w>270</w><h>100</h></coordinates><panel_attributes>RenterAppointmentsViewModel
+--
+~presenter:RenterAppointmentsPresenter
+--
++RenterAppointmentsViewModel()
++getPresenter():RenterAppointmentsPresenter
+#onCleared():void
+ 
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>248</y><w>80</w><h>140</h></coordinates><panel_attributes>lt=&lt;-
+presenter
+
+1</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>670</x><y>58</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>852</x><y>438</y><w>190</w><h>50</h></coordinates><panel_attributes>lt=&lt;.
+περιέχει</panel_attributes><additional_attributes>170;20;10;26</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1022</x><y>444</y><w>210</w><h>30</h></coordinates><panel_attributes>AppointmentDao
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1022</x><y>524</y><w>210</w><h>30</h></coordinates><panel_attributes>RenterDao
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>862</x><y>528</y><w>180</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+περιέχει</panel_attributes><additional_attributes>160;20;10;16</additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>364</y><w>340</w><h>290</h></coordinates><panel_attributes>RenterAppointmentsPresenter
+--
+~view:RenterAppointmentsView
+-appointmentDao:AppointmentDao
+-appointments:ArrayList&lt;Appointment&gt;
+-renterDao:RenterDao
+--
++RenterAppointmentsPresenter()
++findAppointments(String title):void
++getAppointments():ArrayList&lt;Appointment&gt;
++setRenterDao(RenterDao renterDao):void
++setAppointmentDao(AppointmentDao appointmentDao):void
++setView(RenterAppointmentsView view):void
++clearView():void
+
+
+
+
+
+ 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>498</y><w>160</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>150</x><y>434</y><w>250</w><h>150</h></coordinates><panel_attributes>RenterAppointmentsActivity
+--
+~viewModel:RenterAppointmentsViewModel
++RENTER_NICKNAME_EXTRA:String
+~nickname:String
+~textView:TextView
+--
+#onCreate(Bundle savedInstanceState):void
++getListAppointment():ArrayList&lt;Appointment&gt;
+ 
+
+ 
+ 
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>568</y><w>80</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>60;120;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>250</x><y>684</y><w>250</w><h>70</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+--
+RenterAppointmentsView
+--
+~setTitle(String title):void
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>684</y><w>210</w><h>60</h></coordinates><panel_attributes>&lt;&lt;layout&gt;&gt;
+--
+activity_renter_appointments.xml</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>568</y><w>120</w><h>140</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;120;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>288</y><w>30</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>170</x><y>264</y><w>210</w><h>30</h></coordinates><panel_attributes>AppCompatActivity
+ </panel_attributes><additional_attributes></additional_attributes></element></diagram>
